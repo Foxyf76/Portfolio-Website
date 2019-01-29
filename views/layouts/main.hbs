@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Luke Fox Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="../../semantic/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </script>
+
+</head>
+
+
+<script>
+
+  particlesJS.load('particles-js', '../../assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+  });
+  
+
+  AOS.init();
+
+  var options = {
+    strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+    typeSpeed: 40
+  }
+
+  var typed = new Typed(".element", options);
+
+
+</script>
+
+<body>
+
+  
+
+  {{{body}}}
+
+</body>
+
+</html>
+
+<style>
+
+  body {
+    background-color: black;
+  }
+
+#particles-js{
+opacity: 0.3;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+}
+
+</style>

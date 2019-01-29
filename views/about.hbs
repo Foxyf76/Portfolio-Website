@@ -1,0 +1,140 @@
+{{> menu id="about"}}
+
+<div class="ui raised inverted segment">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue user icon"></i>
+    ABOUT
+  </h1>
+</div>
+
+<div class="ui raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="green info icon"></i>
+    <div class="content">
+      FOR YOUR INFORMATION
+    </div>
+  </h2>
+  <li>Name: Luke Fox </li>
+  <li>From: Wexford </li>
+  <li>Age: 21 </li>
+  <li>Interests: Soccer, Table Tennis, Weightlifting, Programming, Gaming </li>
+</div>
+
+<div class="ui raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="orange code icon"></i>
+    <div class="content">
+      LANGUAGES
+    </div>
+
+    <br>
+
+    <div class="ui middle aligned center aligned inverted fixed horizontal list">
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/java.png">
+        <div class="content">
+          <h5 class="ui header">JAVA&emsp;&emsp;&ensp;</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/javascript.png">
+        <div class="content">
+          <h5 class="ui header">JAVASCRIPT</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/html.png">
+        <div class="content">
+          <h5 class="ui header">HTML&emsp;&emsp;&ensp;</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/css.png">
+        <div class="content">
+          <h5 class="ui header">CSS&emsp;&emsp;&ensp;</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/python.png">
+        <div class="content">
+          <h5 class="ui header">PYTHON</h5>
+        </div>
+      </div>
+    </div>
+
+
+  </h2>
+
+</div>
+
+<div class="ui raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="purple graduation cap icon"></i>
+    <div class="content">
+      EXPERIENCE
+    </div>
+  </h2>
+
+</div>
+
+<div id="particles-js"></div>
+
+{{> footer}}
+
+<script>
+
+  $("html, body").animate({ scrollTop: 100 }, 300);
+
+  $('.ui.tiny.circular.image')
+    .transition({
+      animation: 'jiggle',
+      duration: 1100,
+      interval: 400
+    })
+    ;
+
+</script>
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .ui.raised.inverted.segment {
+    border-radius: 20px;
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  #content {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  li {
+    margin-left: 60px;
+    font-size: 16px;
+    list-style: square;
+    padding: 10px;
+  }
+
+  .ui.inverted.horizontal.list {
+    margin-left: 60px;
+  }
+
+  .ui.tiny.circular.image {
+    transition: transform .2s;
+  }
+
+  .ui.tiny.circular.image:hover {
+    transition: transform .2s;
+    transform: scale(1.2);
+  }
+</style>

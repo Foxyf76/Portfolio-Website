@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/blog/january -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Luke Fox Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="./Luke Fox Portfolio_files/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="./Luke Fox Portfolio_files/main.css">
+  <script src="./Luke Fox Portfolio_files/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="./Luke Fox Portfolio_files/semantic.min.js"></script>
+  <link rel="stylesheet" href="./Luke Fox Portfolio_files/aos.css">
+  <script src="./Luke Fox Portfolio_files/aos.js"></script>
+  <script src="./Luke Fox Portfolio_files/typed.js@2.0.9"></script>
+
+  <script src="./Luke Fox Portfolio_files/particles.min.js"></script>
+  
+
+<script>
+
+  particlesJS.load('particles-js', '../../assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+  });
+  
+
+  AOS.init();
+
+  var options = {
+    strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+    typeSpeed: 40
+  }
+
+  var typed = new Typed(".element", options);
+
+
+</script></head>
+
+
+
+
+<body>
+
+  
+
+  <div class="ui inverted centered grid">
+  <div class="ui inverted secondary pointing menu">
+    <a id="home" class="item" href="http://localhost:3000/"> Home </a>
+    <a id="about" class="item" href="http://localhost:3000/about"> About </a>
+    <a id="blog" class="item active" href="http://localhost:3000/blog"> Blog </a>
+    <a id="more" class="item" href="http://localhost:3000/more"> More </a>
+  </div>
+</div>
+
+
+
+<script>
+  $("html, body").animate({ scrollTop: 100 }, 500);
+  $("#blog").addClass("active item")
+</script>
+
+<style> 
+
+  .ui.inverted.secondary.pointing.menu {
+    margin: 20px;
+    border-color: transparent;
+    color: red;
+}
+
+</style>
+<div class="ui raised inverted segment">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue edit icon"></i>
+    JANUARY
+  </h1>
+</div>
+
+<div class="ui left aligned raised inverted segment" id="content">
+
+  <div class="ui inverted accordion">
+
+    <div class="title">
+      <i class="dropdown icon"></i>
+      03/01/19
+    </div>
+        <div class="content">
+      <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+    </div>
+
+    <div class="title">
+      <i class="dropdown icon"></i>
+      04/01/19
+    </div>
+    <div class="content">
+      <p class="transition hidden">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+    </div>
+    <div class="title active">
+      <i class="dropdown icon"></i>
+      05/01/19
+    </div>
+    <div class="content active">
+      <p class="transition visible">Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+      <p class="transition visible">A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="particles-js"><canvas class="particles-js-canvas-el" width="2560" height="1344" style="width: 100%; height: 100%;"></canvas></div>
+
+
+<div class="ui inverted segment">
+
+    <div class="ui inverted horizontal statistic">
+        <i class="ui blue large heart icon"></i>
+        <div class="value">
+
+            <div id="counter"></div>
+        </div>
+        <div class="label">
+            Views
+        </div>
+    </div>
+</div>
+
+<style>
+
+</style>
+
+
+<script src="./Luke Fox Portfolio_files/counter.json">
+
+    var tData = JSON.parse("../../counter");
+
+</script>
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .ui.raised.inverted.segment {
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .content {
+    font-size: 16px;
+    margin-left: 150px;
+  }
+
+  #content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+.ui.inverted.accordion .active.title .dropdown.icon {
+   color: rgb(0, 153, 255);
+}
+
+.ui.inverted.accordion .title {
+  font-size: 25px;
+}
+
+</style>
+
+<script>
+
+  $('.ui.accordion')
+  .accordion()
+;
+
+</script>
+
+
+
+
+
+
+<style>
+
+  body {
+    background-color: black;
+  }
+
+#particles-js{
+opacity: 0.3;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+}
+
+</style></body></html>

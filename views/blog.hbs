@@ -1,0 +1,179 @@
+{{> menu id="blog"}}
+
+<div class="ui raised inverted segment">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue book icon"></i>
+    BLOG
+  </h1>
+</div>
+
+<div class="ui center aligned middle aligned raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="red info icon"></i>
+    <div class="content">
+      CONTEXT
+    </div>
+  </h2>
+  <p>The following blog has been written over my 6-month internship at DistilledSCH in Wexford. It consists mostly of
+    the projects I worked on, the teams I worked with and my day-to-day work at the company!</p>
+
+  <p>The entire blog is broken up within daily entries, each contained within the months shown below. To get started,
+    simply click any of the months!</p>
+</div>
+
+<div class="ui center aligned middle aligned raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="green list icon"></i>
+    <div class="content">
+      SELECT A MONTH
+    </div>
+  </h2>
+
+  <div class="six ui vertical buttons">
+
+    <a href="/blog/january">
+      <div class="ui inverted red animated button" tabindex="0" id="button">
+        <div class="visible content">JANUARY</div>
+        <div class="hidden content">
+          <i class="right arrow icon"></i>
+        </div>
+      </div>
+    </a>
+
+    <div class="ui inverted blue animated button" tabindex="0" id="button">
+      <div class="visible content">FEBRUARY</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+    <div class="ui inverted green animated button" tabindex="0" id="button">
+      <div class="visible content">MARCH</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+    <div class="ui inverted purple animated button" tabindex="0" id="button">
+      <div class="visible content">APRIL</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+    <div class="ui inverted orange animated button" tabindex="0" id="button">
+      <div class="visible content">MAY</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+    <div class="ui inverted yellow animated button" tabindex="0" id="button">
+      <div class="visible content">JUNE</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui center aligned middle aligned raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="orange plus icon"></i>
+    <div class="content">
+      GO FURTHER
+    </div>
+  </h2>
+
+  <div class="ui card">
+    <a class="ui image" href="#">
+      <img src="../assets/distilled.png">
+    </a>
+    <div class="content">
+      <a class="header" href="#">OFFICIAL WEBSITE</a>
+    </div>
+    <div class="ui inverted segment">
+      DistilledSCH Website
+    </div>
+  </div>
+
+  <div class="ui card">
+    <a class="ui image" href="#">
+      <img src="../assets/distilled.png">
+    </a>
+    <div class="content">
+      <a class="header" href="#">JOBBIO VIDEO</a>
+    </div>
+    <div class="ui inverted segment">
+      What it's like to work in Distilled
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+
+<div id="particles-js"></div>
+
+
+{{>footer}}
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .six.ui.vertical.buttons {
+    width: 200px;
+  }
+
+  .ui.raised.inverted.segment {
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  #content {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  #button {
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-left: 35px;
+  }
+
+  .ui.card {
+    display: inline-block;
+    margin: 10px;
+    background-color: rgb(58, 58, 58);
+
+  }
+
+  .ui.card>.card>.content>a.header,
+  .ui.card>.content>a.header {
+    color: white;
+  }
+
+  .ui.cards>.card>.content>a.header:hover,
+  .ui.card>.content>a.header:hover {
+    color: rgb(0, 162, 255)
+  }
+
+  .meta {
+    background-color: rgb(68, 68, 68);
+    color: rgb(0, 162, 255);
+
+  }
+</style>
+
+</script>

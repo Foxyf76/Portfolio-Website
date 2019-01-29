@@ -1,0 +1,121 @@
+{{!-- {{> menu id="home"}} --}}
+
+<div id="particles-js"></div>
+
+<div class="ui center aligned middle aligned segment">
+
+  <div class="item" data-aos="fade-down">
+    <img class="ui centered small image" src="../assets/avatar.png">
+  </div>
+
+  <div class="item" data-aos="fade-right">
+    <hr id="line">
+    <span class="ui header" id="typed"></span>
+    <hr id="line">
+  </div>
+
+
+  <div id="segment1" class="item" data-aos="fade-left">
+    <div class="ui huge inverted header">ABOUT</div>
+  </div>
+
+  <div id="segment2" class="item" data-aos="fade-down">
+    <div class="ui huge inverted header">BLOG</div>
+  </div>
+
+  <div id="segment3" class="item" data-aos="fade-up">
+    <div class="ui huge inverted header">MORE</div>
+  </div>
+
+  
+
+  {{> footer}}
+
+</div>
+
+
+<script>
+
+  AOS.init({
+    duration: 1200,
+  })
+
+  var typed = new Typed("#typed", {
+    strings: ["LUKE <span style='color:rgb(53, 168, 235)'>FOX</span>"],
+    stringsElement: '#typed-strings',
+    typeSpeed: 120,
+    backSpeed: 15,
+    backDelay: 2000,
+    startDelay: 1000,
+    loop: true,
+  });
+
+</script>
+
+<style>
+  .ui.center.aligned.middle.aligned.segment {
+    background-color:transparent;
+  }
+
+  #typed {
+    font-size: 80px;
+    color: white;
+  }
+
+  .typed-cursor {
+    font-size: 100px;
+    color: white;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+
+  #segment1 {
+    background-image: url("../assets/forrest.jpg");
+    background-position: absolute;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+    margin-left: -55px;
+    margin-right: -55px;
+    margin-top: 400px;
+  }
+
+  #segment2 {
+    background-image: url("../assets/farm.jpg");
+    background-position: absolute;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+    margin-left: -55px;
+    margin-right: -55px;
+  }
+
+  #segment3 {
+    background-image: url("../assets/apple.jpg");
+    background-position: absolute;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+    margin-left: -55px;
+    margin-right: -55px;
+  }
+
+  .item {
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    font-size: 3em;
+  }
+
+  #line {
+    width: 60%;
+  }
+</style>
