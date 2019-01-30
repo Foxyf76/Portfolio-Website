@@ -16,18 +16,23 @@
 
 
   <div id="segment1" class="item" data-aos="fade-left">
-    <div class="ui huge inverted header">ABOUT</div>
+    <div class="ui huge inverted header">
+      <a href="/about">ABOUT</a>
+    </div>
   </div>
 
+
   <div id="segment2" class="item" data-aos="fade-down">
-    <div class="ui huge inverted header">BLOG</div>
+    <div class="ui huge inverted header">
+      <a href="/blog">BLOG</a>
+    </div>
   </div>
 
   <div id="segment3" class="item" data-aos="fade-up">
-    <div class="ui huge inverted header">MORE</div>
+    <div class="ui huge inverted header">
+      <a href="/more">MORE</a>
+    </div>
   </div>
-
-  
 
   {{> footer}}
 
@@ -35,6 +40,10 @@
 
 
 <script>
+
+  var webhits = $.getJSON('../../counter.json', function (data) {
+    webhits = data.webhits;
+  });
 
   AOS.init({
     duration: 1200,
@@ -50,11 +59,34 @@
     loop: true,
   });
 
+  $(document).ready(function () {
+    webhits++;
+    $('.value').html(webhits)
+
+    var json = {
+      webhits: webhits,
+      hearts: 0
+    };
+
+    console.log(json);
+
+  });
+
+
+
 </script>
 
 <style>
   .ui.center.aligned.middle.aligned.segment {
-    background-color:transparent;
+    background-color: transparent;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: rgb(0, 183, 255);
   }
 
   #typed {
