@@ -41,6 +41,11 @@ app.get("/blog/january", (req, res) => {
   res.render("january.hbs");
 });
 
+<<<<<<< HEAD
 app.listen(3000, () => {
   console.log("App is running → PORT 3000");
+=======
+app.listen(process.env.PORT || 5000, () => {
+  console.log('App is running → PORT 5000');
+>>>>>>> 03a2ab8c229748dfa141d043928ecdc477f0a0aa
 });
