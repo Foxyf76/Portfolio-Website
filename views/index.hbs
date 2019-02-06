@@ -41,6 +41,15 @@
 
 <script>
 
+  function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds) {
+        break;
+      }
+    }
+  }
+
   var json = {
     hearts: 0,
     webhits: 0
@@ -73,6 +82,7 @@
           json = JSON.parse(get.responseText);
           json.webhits++;
           $(".value")[0].innerHTML = json.webhits;
+          $(".value")[1].innerHTML = json.hearts;
           postJSON(true);
 
         }
@@ -83,14 +93,23 @@
     }
   };
 
+  function incrementHearts(event) {
+    $('.ui.button').blur()
+    json.hearts++;
+    $(".value")[1].innerHTML = json.hearts;
+    postJSON(true);
+
+
+  }
+
   function postJSON(boolean) {
     if (boolean == true) {
-        let put = new XMLHttpRequest();
-        put.open("PUT", "https://api.jsonbin.io/b/5c5b0f8d4c4430170a9c08f5", true);
-        put.setRequestHeader("Content-type", "application/json");
-        put.setRequestHeader("secret-key", "$2a$10$lFB8cBUsA81aQwasd4d9ku7iMDJjDdXllAWhanIuA4Nhf3gTVDmnS");
-        put.setRequestHeader("versioning", "false") // change base values
-        put.send(JSON.stringify(json));
+      let put = new XMLHttpRequest();
+      put.open("PUT", "https://api.jsonbin.io/b/5c5b0f8d4c4430170a9c08f5", true);
+      put.setRequestHeader("Content-type", "application/json");
+      put.setRequestHeader("secret-key", "$2a$10$lFB8cBUsA81aQwasd4d9ku7iMDJjDdXllAWhanIuA4Nhf3gTVDmnS");
+      put.setRequestHeader("versioning", "false") // change base values
+      put.send(JSON.stringify(json));
     }
   };
 

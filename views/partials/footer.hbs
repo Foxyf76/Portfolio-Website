@@ -1,12 +1,76 @@
 <div class="ui inverted segment">
 
-    <div class="ui inverted horizontal statistic">
-        <i class="ui blue large eye icon"></i>
-        <div class="small value"></div>
+    <div class="ui inverted horizontal small statistic">
+        <i class="ui blue big eye icon"></i>
+        <div class="value"></div>
         <div class="label">Views</div>
     </div>
+    <div class="ui inverted horizontal small statistic">
+        <i class="ui red big heart icon"></i>
+        <div class="value"></div>
+        <div class="label">Hearts</div>
+        <button class="ui inverted circular icon button" onclick="incrementHearts(); showModal()">
+            <i class="ui red plus icon"></i>
+        </button>
+    </div>
+
+    <div class="ui mini inverted modal">
+
+        <div class="content">
+             <i class="ui small circular inverted green thumbs up icon"></i>
+            THANKS!
+        </div>
+
+    </div>
+
 </div>
 
-<style>
+<script>
 
+    var display = 'hide';
+
+    function showModal() {
+        display = 'show';
+    $('.ui.modal')
+        .modal({
+            blurring: true
+        })
+        .modal(display)
+        ;
+    }
+
+</script>
+
+<style>
+    .value {
+        margin-right: -5px;
+    }
+
+    .ui.statistic {
+        margin-bottom: -5px;
+    }
+
+    .ui.inverted.segment {
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .ui.circular.icon.button {
+        margin-left: 10px;
+    }
+
+    .content {
+        display: inline !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        font-size: 60px !important;
+        
+        color: white;
+    }
+
+    .ui.mini.modal {
+        height: 14%;
+        width: 32%;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+       
+    }
 </style>
