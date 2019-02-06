@@ -5,11 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "browserify": "^16.2.3",
+    "browserify-fs": "^1.0.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "file-saver": "^2.0.0",
@@ -23,8 +28,13 @@
     "semantic-ui": "^2.4.2"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.28.4",
-    "webpack-livereload-plugin": "^2.2.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack-cli": "^3.2.1"
   }
 }

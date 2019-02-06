@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
+const cors = require('cors');
 
 ///
 
@@ -16,7 +17,24 @@ app.use(express.static(__dirname + "/views"));
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/assets", express.static(__dirname + "/assets"));
 app.use("/counter.json", express.static(__dirname + "/counter.json"));
-app.use("/server.js", express.static(__dirname + "/server.js"));
+app.use("/js", express.static(__dirname + "/js"));
+
+// CORS
+app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
+app.all("/*", function (req, res, next) {
+
+  res.header("Access-Control-Allow-Origin", req.headers.origin);
+  res.header("Access-Control-Allow-Credentials",true);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Accept,X-Access-Token,X-Key,Authorization,X-Requested-With,Origin,Access-Control-Allow-Origin,Access-Control-Allow-Credentials');
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+  } else {
+    next();
+  }
+});
+
+////
 
 // Use Handlebars view engine
 app.set("view engine", ".hbs");
@@ -42,5 +60,5 @@ app.get("/blog/january", (req, res) => {
 });
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log('App is running → PORT 5000');
+  console.log("App is running → PORT 5000");
 });

@@ -5,6 +5,8 @@
   <title>Luke Fox Portfolio</title>
   <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css" />
   <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
   <script src="../../semantic/dist/semantic.min.js"></script>
@@ -12,8 +14,6 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="../../server.js"></script>
-  </script>
 
 </head>
 
@@ -21,7 +21,7 @@
 
   particlesJS.load('particles-js', '../../assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
-  }); 
+  });
 
   AOS.init();
 
@@ -32,12 +32,9 @@
 
   var typed = new Typed(".element", options);
 
-
 </script>
 
 <body>
-
-  
 
   {{{body}}}
 
@@ -46,20 +43,22 @@
 </html>
 
 <style>
-
   body {
     background-color: black;
   }
 
-#particles-js{
-opacity: 0.3;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -5;
-}
+  #particles-js {
+    opacity: 0.3;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -5;
+  }
 
+  p {
+    font-family: 'Poiret One', cursive;
+  }
 </style>
