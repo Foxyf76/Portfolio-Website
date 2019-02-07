@@ -9,19 +9,26 @@
         <i class="ui red big heart icon"></i>
         <div class="value"></div>
         <div class="label">Hearts</div>
-        <button class="ui inverted circular icon button" onclick="incrementHearts(); showModal()">
-            <i class="ui red plus icon"></i>
-        </button>
+        <i class="ui small red plus icon" style="margin-left: 5px;" onclick="incrementHearts(); showModal()"> </i>
     </div>
 
-    <div class="ui mini inverted modal">
+    <div class="ui inverted horizontal small statistic">
 
-        <div class="content" id="modalContent">
-            <i class="ui small circular inverted green thumbs up icon"></i>
-            THANKS!
-        </div>
-
+        <i class="ui inverted green big copyright outline icon"></i>
+        <div class="value"></div>
+        <a class="label" href="https://www.copyrighted.com/website/UHZHneqBUPbIUKXT"
+            title="Copyrighted.com Registered &amp; Protected">LUKE FOX</a>
     </div>
+</div>
+
+<div class="ui mini inverted modal">
+
+    <div class="content" id="modalContent">
+        <i class="ui small circular inverted green thumbs up icon"></i>
+        THANKS!
+    </div>
+
+</div>
 
 </div>
 
@@ -43,7 +50,6 @@
             .modal(display)
             ;
     }
-
 
     $(document).ready(function () {
         getJSON(true);
@@ -71,8 +77,6 @@
             get.send();
         }
     };
-
-
 
     function incrementHearts(event) {
         $('.ui.button').blur()
@@ -112,7 +116,7 @@
         margin-left: 10px;
     }
 
-    #modalContent{
+    #modalContent {
         display: inline !important;
         background-color: rgba(0, 0, 0, 0) !important;
         font-size: 60px !important;
@@ -123,6 +127,18 @@
         height: 14%;
         width: 32%;
         background-color: rgba(0, 0, 0, 0.1) !important;
+    }
 
+    .copyrighted-badge {
+        padding: 20px;
+    }
+
+    .ui.small.red.plus.icon:hover {
+        cursor: pointer;
+    }
+
+    #copyright_header:hover {
+        color: rgb(96, 204, 33);
+        cursor: pointer;
     }
 </style>
