@@ -2,15 +2,155 @@
 
 
 
-<div class="ui labeled button" tabindex="0">
-  <div class="ui blue button">
-    <i class="heart icon"></i> Like
-  </div>
-  <a class="ui basic blue left pointing label">
-    1,048
-  </a>
+<div class="ui raised inverted segment">
+  <hr id="divider">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue lightbulb outline icon"></i>
+    MORE
+  </h1>
 </div>
+
+<div class="ui left aligned raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="pink plus icon"></i>
+    <div class="content">
+      MORE
+    </div>
+  </h2>
+  <p>Here you can find some additional information such as what was used in the making of the site, as well as some
+    useful links! Don't forget to check out my GitHub too!</p>
+</div>
+<div class="ui raised inverted segment" id="content">
+  <h2 class="ui header">
+    <i class="yellow flask icon"></i>
+    <div class="content">
+      MADE WITH
+    </div>
+  </h2>
+  <div class="ui middle aligned center aligned inverted fixed horizontal list">
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/node.png">
+      <div class="content">
+        <h5 class="ui header">NODE&emsp;&emsp;&ensp;&ensp;</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/handlebars.png">
+      <div class="content">
+        <h5 class="ui header">HANDLEBARS</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/express.png">
+      <div class="content">
+        <h5 class="ui header">EXPRESS&emsp;&emsp;</h5>
+      </div>
+    </div>
+        <div class="item">
+      <img class="ui tiny circular image" src="../assets/semantic.png">
+      <div class="content">
+        <h5 class="ui header">SEMANTIC UI&emsp;&emsp;&ensp;</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="ui raised inverted segment" id="content">
+    <h2 class="ui header">
+      <i class="teal bullhorn icon"></i>
+      <div class="content">
+        CONTACT & USEFUL LINKS
+      </div>
+    </h2>
+    <div class="ui middle aligned center aligned inverted fixed horizontal list">
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/github.png">
+        <div class="content">
+          <h5 class="ui header">GITHUB&emsp;&emsp;&ensp;</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/linkedin.png">
+        <div class="content">
+          <h5 class="ui header">LINKEDIN</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui tiny circular image" src="../assets/plus.png">
+        <div class="content">
+          <h5 class="ui header">EXTRA&emsp;&emsp;&ensp;</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
 <div id="particles-js"></div>
 
+{{>footer}}
 
+<script>
+
+  $('.ui.tiny.circular.image')
+    .transition({
+      animation: 'jiggle',
+      duration: 1100,
+      interval: 400
+    })
+    ;
+
+</script>
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .ui.raised.inverted.segment {
+    border-radius: 20px;
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  p {
+    margin-left: 50px;
+  }
+
+  #content {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .ui.inverted.horizontal.list {
+    margin-left: 60px;
+  }
+
+  .ui.tiny.circular.image {
+    margin-top: 20px;
+    transition: transform .2s;
+  }
+
+  .ui.tiny.circular.image:hover {
+    transition: transform .2s;
+    transform: scale(1.2);
+  }
+
+  #divider {
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    margin-top: 85px;
+    margin-left: 229px;
+    border: 0;
+    border-top: 1px solid white;
+  }
+</style>
