@@ -21,18 +21,11 @@
 
 <script>
 
-  particlesJS.load('particles-js', '../../assets/particles.json', function () {
+  particlesJS.load('particles-js', '../../js/particles.json', function () {
     console.log('callback - particles.js config loaded');
   });
 
   AOS.init();
-
-  var options = {
-    strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-    typeSpeed: 40
-  }
-
-  var typed = new Typed(".element", options);
 
 </script>
 
@@ -48,7 +41,7 @@
   body {
     background-color: black;
   }
-
+  
   #particles-js {
     opacity: 0.3;
     width: 100%;

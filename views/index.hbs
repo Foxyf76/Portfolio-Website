@@ -2,7 +2,7 @@
 
 <div id="particles-js"></div>
 
-<div class="ui center aligned middle aligned segment">
+<div class="ui center aligned middle aligned segment" id="main-container">
 
   <div class="item" data-aos="fade-down">
     <img class="ui centered small image" src="../assets/avatar.png">
@@ -58,7 +58,16 @@
 </script>
 
 <style>
-  .ui.center.aligned.middle.aligned.segment {
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/index.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #main-container {
     background-color: transparent;
   }
 

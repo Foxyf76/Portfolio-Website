@@ -1,0 +1,113 @@
+{{> menu id="blog"}}
+
+
+<div class="ui raised inverted segment">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue edit icon"></i>
+    FEBRUARY
+  </h1>
+</div>
+
+<div class="ui red segment">
+
+
+  <div id="my-container" class="table-responsive">
+  </div>
+  <!--Handlebar templates start-->
+  <script type="x-template" id="student-template">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mark</th>
+                    <th>Subject</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each students}}
+                <tr>
+                    <td>{{ this.name }}</td>
+                    <td>{{ this.mark }}</td>
+                    <td>{{ this.subject }}</td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </script>
+
+
+
+</div>
+
+
+
+
+
+<div id="particles-js"></div>
+
+{{>footer}}
+
+<script src="../js/templateBlogs.js"></script>
+
+<script>
+
+  $('.ui.accordion')
+    .accordion()
+    ;
+
+
+
+//let getEntries = new XMLHttpRequest();
+
+// getEntries.onreadystatechange = () => {
+// if (getEntries.readyState == XMLHttpRequest.DONE) {
+// entries = JSON.parse(getEntries.responseText);
+// console.log(entries);
+//}
+// }
+// getEntries.open("GET", "https://api.jsonbin.io/b/5c614f11ad5128320af6cb7c", true);
+//getEntries.setRequestHeader("secret-key", "$2a$10$lFB8cBUsA81aQwasd4d9ku7iMDJjDdXllAWhanIuA4Nhf3gTVDmnS");
+//getEntries.send();
+
+
+
+</script>
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .ui.raised.inverted.segment {
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .content {
+    font-size: 16px;
+    margin-left: 150px;
+  }
+
+  #content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  .ui.inverted.vertical.fluid.tabular.menu .active.item {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    color: rgb(0, 153, 255) !important;
+  }
+
+  .tab.content {
+    margin: auto;
+  }
+</style>
