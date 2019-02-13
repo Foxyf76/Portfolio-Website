@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 
 ///
 
@@ -13,28 +13,11 @@ app.engine(".hbs", exphbs({ defaultLayout: "main", extname: ".hbs" }));
 // Use Semantic UI
 app.use("/semantic", express.static(__dirname + "/semantic"));
 
-app.use(express.static(__dirname + "/views"));
+app.use("/views", express.static(__dirname + "/views"));
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/assets", express.static(__dirname + "/assets"));
-app.use("/counter.json", express.static(__dirname + "/counter.json"));
 app.use("/js", express.static(__dirname + "/js"));
-
-// CORS
-app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
-app.all("/*", function (req, res, next) {
-
-  res.header("Access-Control-Allow-Origin", req.headers.origin);
-  res.header("Access-Control-Allow-Credentials",true);
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Accept,X-Access-Token,X-Key,Authorization,X-Requested-With,Origin,Access-Control-Allow-Origin,Access-Control-Allow-Credentials');
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-  } else {
-    next();
-  }
-});
-
-////
+app.use("/", express.static(__dirname + "/"));
 
 // Use Handlebars view engine
 app.set("view engine", ".hbs");
@@ -57,6 +40,10 @@ app.get("/blog", (req, res) => {
 
 app.get("/blog/january", (req, res) => {
   res.render("january.hbs");
+});
+
+app.get("/blog/february", (req, res) => {
+  res.render("february.hbs");
 });
 
 app.listen(process.env.PORT || 5000, () => {

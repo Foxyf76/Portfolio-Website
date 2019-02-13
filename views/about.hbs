@@ -14,10 +14,12 @@
       FOR YOUR INFORMATION
     </div>
   </h2>
-  <li>Name: Luke Fox </li>
-  <li>From: Wexford </li>
-  <li>Age: 21 </li>
-  <li>Interests: Soccer, Table Tennis, Weightlifting, Programming, Gaming </li>
+  <ul>
+    <li>Name: Luke Fox </li>
+    <li>From: Wexford </li>
+    <li>Age: 21 </li>
+    <li>Interests: Soccer, Table Tennis, Weightlifting, Programming, Gaming </li>
+  </ul>
 </div>
 
 <div class="ui raised inverted segment" id="content">
@@ -26,45 +28,42 @@
     <div class="content">
       LANGUAGES
     </div>
-
-    <br>
-
-    <div class="ui middle aligned center aligned inverted fixed horizontal list">
-      <div class="item">
-        <img class="ui tiny circular image" src="../assets/java.png">
-        <div class="content">
-          <h5 class="ui header">JAVA&emsp;&emsp;&ensp;</h5>
-        </div>
-      </div>
-      <div class="item">
-        <img class="ui tiny circular image" src="../assets/javascript.png">
-        <div class="content">
-          <h5 class="ui header">JAVASCRIPT</h5>
-        </div>
-      </div>
-      <div class="item">
-        <img class="ui tiny circular image" src="../assets/html.png">
-        <div class="content">
-          <h5 class="ui header">HTML&emsp;&emsp;&ensp;</h5>
-        </div>
-      </div>
-      <div class="item">
-        <img class="ui tiny circular image" src="../assets/css.png">
-        <div class="content">
-          <h5 class="ui header">CSS&emsp;&emsp;&ensp;</h5>
-        </div>
-      </div>
-      <div class="item">
-        <img class="ui tiny circular image" src="../assets/python.png">
-        <div class="content">
-          <h5 class="ui header">PYTHON</h5>
-        </div>
-      </div>
-    </div>
-
-
   </h2>
 
+  <br>
+
+  <div class="ui middle aligned center aligned inverted fixed horizontal list">
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/java.png">
+      <div class="content">
+        <h5 class="ui header">JAVA&emsp;&emsp;&ensp;</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/javascript.png">
+      <div class="content">
+        <h5 class="ui header">JAVASCRIPT</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/html.png">
+      <div class="content">
+        <h5 class="ui header">HTML&emsp;&emsp;&ensp;</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/css.png">
+      <div class="content">
+        <h5 class="ui header">CSS&emsp;&emsp;&ensp;</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui tiny circular image" src="../assets/python.png">
+      <div class="content">
+        <h5 class="ui header">PYTHON</h5>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="ui raised inverted segment" id="content">
@@ -74,6 +73,28 @@
       EXPERIENCE
     </div>
   </h2>
+
+  <div class="ui grid">
+    <div class="six wide column">
+      <div class="ui medium image">
+        <img src="../assets/distilled circle.png">
+      </div>
+    </div>
+    <div class="ten wide column">
+      <h3 class="ui center aligned inverted header">DISTILLED SCH</h3>
+      <hr>
+      <ul>
+        <li><b>Duration:</b> January 2019 - June 2019 (Work Placement). </li>
+        <li><b>Role:</b> QA Engineer. </li>
+        <li><b>Duties:</b> Performing automated and manual testing on new website features as part of a scrum team.
+        </li>
+        <li><b>Technologies:</b> Jenkins, WebdriverIO, Docker, Selenium, Browserstack, Allure </li>
+        <li>For more information, visit the Blog section!</li>
+      </ul>
+    </div>
+
+
+  </div>
 
 </div>
 
@@ -119,10 +140,11 @@
   }
 
   li {
-    margin-left: 60px;
+    margin-left: 40px;
     font-size: 16px;
     list-style: square;
-    padding: 10px;
+    padding: 8px;
+    list-style-position: outside;
   }
 
   .ui.inverted.horizontal.list {
@@ -136,5 +158,9 @@
   .ui.tiny.circular.image:hover {
     transition: transform .2s;
     transform: scale(1.2);
+  }
+
+  .ui.medium.image {
+    margin-top: 25px;
   }
 </style>
