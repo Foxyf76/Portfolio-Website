@@ -32,186 +32,146 @@
     </div>
   </h2>
 
-  <div class="ui grid">
-    <div class="six column row">
+  <div class="ui stackable padded grid">
+    <div class="center aligned six column row">
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/java.png">
-        <h5>&emsp;&ensp;JAVA</h5>
+        <h4>JAVA</h4>
       </div>
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/css.png">
-        <h5>&emsp;&ensp;&ensp;CSS</h5>
+        <h4>CSS</h4>
       </div>
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/typescript.png">
-        <h5>TYPESCRIPT</h5>
+        <h4>TYPESCRIPT</h4>
       </div>
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/html.png">
-        <h5>&emsp;&ensp;HTML</h5>
+        <h4>HTML</h4>
       </div>
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/python.png">
-        <h5>&emsp;PYTHON</h5>
+        <h4>PYTHON</h4>
       </div>
 
       <div class="column">
         <img class="ui middle aligned tiny circular image" src="../assets/javascript.png">
-        <h5>JAVASCRIPT</h5>
-
+        <h4>JAVASCRIPT</h4>
       </div>
     </div>
   </div>
 </div>
 
-<div class="ui raised inverted segment" id="content">
-  <h2 class="ui header">
-    <i class="orange code icon"></i>
-    <div class="content">
-      LANGUAGES
-    </div>
-  </h2>
 
-  <br>
+  <div class="ui raised inverted segment" id="content">
+    <h2 class="ui header">
+      <i class="purple graduation cap icon"></i>
+      <div class="content">
+        EXPERIENCE
+      </div>
+    </h2>
 
-  <div class="ui middle aligned center aligned inverted fixed horizontal list">
-    <div class="item">
-      <img class="ui tiny circular image" src="../assets/java.png">
-      <div class="content">
-        <h5 class="ui header">JAVA&emsp;&emsp;&ensp;</h5>
+    <div class="ui stackable grid">
+      <div class="center aligned six wide column">
+        <div class="ui medium image">
+          <img src="../assets/distilled circle.png">
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="ui tiny circular image" src="../assets/javascript.png">
-      <div class="content">
-        <h5 class="ui header">JAVASCRIPT</h5>
+      <div class="ten wide column">
+        <h3 class="ui center aligned inverted header">DISTILLED SCH</h3>
+        <hr>
+        <ul>
+          <li><b>Duration:</b> January 2019 - June 2019 (Work Placement). </li>
+          <li><b>Role:</b> QA Engineer. </li>
+          <li><b>Duties:</b> Performing automated and manual testing on new website features as part of a scrum team.
+          </li>
+          <li><b>Technologies:</b> Jenkins, WebdriverIO, Docker, Selenium, Browserstack, Allure </li>
+          <li>For more information, visit the Blog section!</li>
+        </ul>
       </div>
-    </div>
-    <div class="item">
-      <img class="ui tiny circular image" src="../assets/html.png">
-      <div class="content">
-        <h5 class="ui header">HTML&emsp;&emsp;&ensp;</h5>
-      </div>
-    </div>
-    <div class="item">
-      <img class="ui tiny circular image" src="../assets/css.png">
-      <div class="content">
-        <h5 class="ui header">CSS&emsp;&emsp;&ensp;</h5>
-      </div>
-    </div>
-    <div class="item">
-      <img class="ui tiny circular image" src="../assets/python.png">
-      <div class="content">
-        <h5 class="ui header">PYTHON</h5>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="ui raised inverted segment" id="content">
-  <h2 class="ui header">
-    <i class="purple graduation cap icon"></i>
-    <div class="content">
-      EXPERIENCE
-    </div>
-  </h2>
 
-  <div class="ui grid">
-    <div class="six wide column">
-      <div class="ui medium image">
-        <img src="../assets/distilled circle.png">
-      </div>
     </div>
-    <div class="ten wide column">
-      <h3 class="ui center aligned inverted header">DISTILLED SCH</h3>
-      <hr>
-      <ul>
-        <li><b>Duration:</b> January 2019 - June 2019 (Work Placement). </li>
-        <li><b>Role:</b> QA Engineer. </li>
-        <li><b>Duties:</b> Performing automated and manual testing on new website features as part of a scrum team.
-        </li>
-        <li><b>Technologies:</b> Jenkins, WebdriverIO, Docker, Selenium, Browserstack, Allure </li>
-        <li>For more information, visit the Blog section!</li>
-      </ul>
-    </div>
-
 
   </div>
 
-</div>
+  <div id="particles-js"></div>
 
-<div id="particles-js"></div>
+  {{> footer}}
 
-{{> footer}}
+  <script>
 
-<script>
+    $("html, body").animate({ scrollTop: 100 }, 300);
 
-  $("html, body").animate({ scrollTop: 100 }, 300);
+    $('.ui.tiny.circular.image')
+      .transition({
+        animation: 'jiggle',
+        duration: 1100,
+        interval: 400
+      })
+      ;
 
-  $('.ui.tiny.circular.image')
-    .transition({
-      animation: 'jiggle',
-      duration: 1100,
-      interval: 400
-    })
-    ;
+  </script>
 
-</script>
+  <style>
+    body {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)),
+        url('../assets/background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
 
-<style>
-  body {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)),
-      url('../assets/background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-  }
+    .ui.grid {
+      margin-left: 50px;
+    }
 
-  .ui.grid {
-    margin-left: 50px;
-  }
+    span {
+      margin: auto;
+    }
 
-  .ui.raised.inverted.segment {
-    border-radius: 20px;
-    background-color: transparent;
-    width: 75%;
-    margin: auto;
-    margin-top: 60px;
-    padding: 10px;
-  }
+    .ui.raised.inverted.segment {
+      border-radius: 20px;
+      background-color: transparent;
+      width: 75%;
+      margin: auto;
+      margin-top: 60px;
+      padding: 10px;
+    }
 
-  #content {
-    background: rgba(0, 0, 0, 0.5);
-  }
+    #content {
+      background: rgba(0, 0, 0, 0.5);
+    }
 
-  li {
-    margin-left: 40px;
-    font-size: 16px;
-    list-style: square;
-    padding: 8px;
-    list-style-position: outside;
-  }
+    li {
+      margin-left: 40px;
+      font-size: 16px;
+      list-style: square;
+      padding: 8px;
+      list-style-position: outside;
+    }
 
-  .ui.inverted.horizontal.list {
-    margin-left: 60px;
-  }
+    .ui.inverted.horizontal.list {
+      margin-left: 60px;
+    }
 
-  .ui.tiny.circular.image {
-    transition: transform .2s;
-  }
+    .ui.tiny.circular.image {
+      transition: transform .2s;
+    }
 
-  .ui.tiny.circular.image:hover {
-    transition: transform .2s;
-    transform: scale(1.2);
-  }
+    .ui.tiny.circular.image:hover {
+      transition: transform .2s;
+      transform: scale(1.2);
+    }
 
-  .ui.medium.image {
-    margin-top: 25px;
-  }
-</style>
+    .ui.medium.image {
+      margin-top: 25px;
+    }
+  </style>
