@@ -1,23 +1,29 @@
-<div class="ui middle aligned center aligned inverted segment">
+<div class="ui raised stackable inverted segment" id="footer">
 
-    <div class="ui inverted horizontal small statistic">
-        <i class="ui blue big eye icon"></i>
-        <div class="value"></div>
-        <div class="label">Views</div>
-    </div>
-    <div class="ui inverted horizontal small statistic">
-        <i class="ui red big heart icon"></i>
-        <div class="value"></div>
-        <div class="label">Hearts</div>
-        <i class="ui small red plus icon" style="margin-left: 5px;" onclick="incrementHearts(); showModal()"> </i>
-    </div>
+    <div class="ui stackable centered grid">
 
-    <div class="ui inverted horizontal small statistic">
+        <div class="ui statistics">
+            <div class="ui inverted horizontal small statistic">
+                <i class="ui blue big eye icon"></i>
+                <div class="value"></div>
+                <div class="label">Views</div>
+            </div>
+            <div class="ui inverted horizontal small statistic">
+                <i class="ui red big heart icon"></i>
+                <div class="value"></div>
+                <div class="label">Hearts</div>
+                <i class="ui small red plus icon" style="margin-left: 5px;" onclick="incrementHearts(); showModal()">
+                </i>
+            </div>
 
-        <i class="ui inverted big copyright outline icon"></i>
-        <div class="value"></div>
-        <a class="label" href="https://www.copyrighted.com/website/UHZHneqBUPbIUKXT"
-            title="Copyrighted.com Registered &amp; Protected">LUKE FOX</a>
+            <div class="ui inverted horizontal small statistic">
+
+                <i class="ui inverted big copyright outline icon"></i>
+                <div class="value"></div>
+                <a class="label" href="https://www.copyrighted.com/website/UHZHneqBUPbIUKXT"
+                    title="Copyrighted.com Registered &amp; Protected">LUKE FOX</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -34,26 +40,20 @@
 
 <script src="../../js/footer.js">
 
-
-
 </script>
 
 <style>
-    .value {
-        margin-right: -5px;
-    }
-
-    .ui.statistic {
-        margin-bottom: -5px;
-    }
-
-    .ui.inverted.segment {
+    #footer {
+        height: 8%;
+        background-color: rgb(43, 43, 43);
+        margin-top: 20px !important;
         border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
+        width: 75%;
+        margin: auto;
     }
 
-    .ui.circular.icon.button {
-        margin-left: 10px;
+    .ui.inverted.horizontal.small.statistic {
+        margin-top: 18px;
     }
 
     #modalContent {
@@ -67,10 +67,6 @@
         height: 14%;
         width: 32%;
         background-color: rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .copyrighted-badge {
-        padding: 20px;
     }
 
     .ui.small.red.plus.icon:hover {
