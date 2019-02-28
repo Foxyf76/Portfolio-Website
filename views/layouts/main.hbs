@@ -26,7 +26,9 @@
     console.log('callback - particles.js config loaded');
 
     if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
       console.log('ON MOBILE');
+      
       var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
       $("#particles-js").css("height", "50%");
       $("#particles-js").css("top", "100px");
