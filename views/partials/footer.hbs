@@ -1,42 +1,55 @@
-<div class="ui raised stackable inverted segment" id="footer">
+<div class="ui raised inverted segment" id="footer">
 
-    <div class="ui stackable centered grid">
 
-        <div class="ui statistics">
-            <div class="ui inverted horizontal small statistic">
-                <i class="ui blue big eye icon"></i>
-                <div class="value"></div>
-                <div class="label">Views</div>
-            </div>
-            <div class="ui inverted horizontal small statistic">
-                <i class="ui red big heart icon"></i>
-                <div class="value"></div>
-                <div class="label">Hearts</div>
-                <i class="ui small red plus icon" style="margin-left: 5px;" onclick="incrementHearts(); showModal()">
-                </i>
+    <div class="ui stackable grid">
+        <div class="center aligned three column row">
+
+            <div class="column">
+                <div class="ui inverted horizontal small statistic">
+                    <i class="ui blue big eye icon"></i>
+                    <div class="value"></div>
+                    <div class="label">Views</div>
+                </div>
             </div>
 
-            <div class="ui inverted horizontal small statistic">
-
-                <i class="ui inverted big copyright outline icon"></i>
-                <div class="value"></div>
-                <a class="label" href="https://www.copyrighted.com/website/UHZHneqBUPbIUKXT"
-                    title="Copyrighted.com Registered &amp; Protected">LUKE FOX</a>
+            <div class="column">
+                <div class="ui inverted horizontal small statistic">
+                    <i class="ui red big heart icon"></i>
+                    <div class="value"></div>
+                    <div class="label">Hearts</div>
+                    <i class="ui small red plus icon" style="margin-left: 5px;"
+                        onclick="incrementHearts(); showModal()">
+                    </i>
+                </div>
             </div>
+
+            <div class="column">
+                <div class="ui inverted horizontal small statistic">
+
+                    <i class="ui inverted big copyright outline icon"></i>
+                    <div class="value"></div>
+                    <a class="label" href="https://www.copyrighted.com/website/UHZHneqBUPbIUKXT"
+                        title="Copyrighted.com Registered &amp; Protected">LUKE FOX</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui mini inverted modal">
+
+        <div class="ui stackable grid">
+            <div class="center aligned one column row">
+                <div class="column" <div class="content" id="modalContent">
+                    <i class="ui small circular inverted green thumbs up icon"></i>
+                    THANKS!
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="ui mini inverted modal">
-
-    <div class="content" id="modalContent">
-        <i class="ui small circular inverted green thumbs up icon"></i>
-        THANKS!
-    </div>
-
-</div>
-
-</div>
 
 <script src="../../js/footer.js">
 
@@ -44,17 +57,14 @@
 
 <style>
     #footer {
-        height: 8%;
         background-color: rgb(43, 43, 43);
-        margin-top: 20px !important;
+        margin-top: 50px !important;
         border-radius: 20px;
         width: 75%;
-        margin: auto;
+        border-top: 2px solid black;
     }
 
-    .ui.inverted.horizontal.small.statistic {
-        margin-top: 18px;
-    }
+
 
     #modalContent {
         display: inline !important;
@@ -64,8 +74,7 @@
     }
 
     .ui.mini.modal {
-        height: 14%;
-        width: 32%;
+ 
         background-color: rgba(0, 0, 0, 0.1) !important;
     }
 
