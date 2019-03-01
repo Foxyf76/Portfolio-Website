@@ -1,0 +1,164 @@
+{{!-- {{> menu id="home"}} --}}
+
+<div id="particles-js"></div>
+
+<div class="ui center aligned middle aligned segment" id="main-container">
+
+
+
+    <div class="item" data-aos="fade-down">
+      <img class="ui centered small image" src="../assets/avatar.png">
+    </div>
+
+    <div class="item" data-aos="fade-right">
+      <hr id="line">
+      <span class="ui header" id="typed"></span>
+      <hr id="line">
+    </div>
+
+   
+
+    <a href="/about">
+      <div id="segment1" class="item" data-aos="fade-left">
+        <div class="ui huge inverted header">
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog">
+      <div id="segment2" class="item" data-aos="fade-down">
+        <div class="ui huge inverted header">
+        </div>
+      </div>
+    </a>
+
+    <a href="/more">
+      <div id="segment3" class="item" data-aos="fade-up">
+        <div class="ui huge inverted header">
+        </div>
+      </div>
+    </a>
+
+    <div class="ui container" id="index-footer">
+      MADE BY LUKE FOX
+    </div>
+
+
+
+</div>
+
+
+<script>
+
+  AOS.init({
+    duration: 1200,
+  })
+
+  var typed = new Typed("#typed", {
+    strings: ["LUKE <span style='color:rgb(53, 168, 235)'>FOX</span>"],
+    stringsElement: '#typed-strings',
+    typeSpeed: 120,
+    backSpeed: 15,
+    backDelay: 2000,
+    startDelay: 1000,
+    loop: true,
+  });
+
+</script>
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/index.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #main-container {
+    background-color: transparent;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: rgb(0, 183, 255);
+  }
+
+  #typed {
+    font-size: 80px;
+    color: white;
+  }
+
+  .typed-cursor {
+    font-size: 100px;
+    color: white;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+
+  #segment1 {
+    background-image: url("../assets/about.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -30px center;
+    height: 400px;
+    margin-left: -20px;
+    margin-right: -55px;
+    margin-top: 400px;
+  }
+
+  #segment2 {
+    background-image: url("../assets/blog.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -30px center;
+    height: 400px;
+    margin-left: -20px;
+    margin-right: -55px;
+
+  }
+
+  #segment3 {
+    background-image: url("../assets/more.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -30px center;
+    height: 400px;
+    margin-left: -20px;
+    margin-right: -55px;
+  }
+
+
+
+
+  .item {
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    font-size: 3em;
+  }
+
+  #line {
+    width: 60%;
+  }
+
+  #index-footer {
+
+    border-top: 1px solid rgb(0, 183, 255);
+    padding: 5px;
+    height: 40px;
+    width: 30%;
+    color: white;
+    margin-bottom: -30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+</style>

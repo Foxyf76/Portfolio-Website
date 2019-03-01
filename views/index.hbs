@@ -2,10 +2,10 @@
 
 <div id="particles-js"></div>
 
-<div class="ui center aligned middle aligned segment" id="main-container">
+<div class="ui center aligned middle aligned inverted segment" id="main-container">
 
 
-  <div class="item" data-aos="fade-down">
+  <div class="ui inverted segment" data-aos="fade-down" id="avatar">
     <img class="ui centered small image" src="../assets/avatar.png">
   </div>
 
@@ -93,8 +93,15 @@
     margin: auto;
   }
 
-  #main-container {
+  .ui.inverted.segment {
     background-color: transparent;
+  }
+
+#avatar {
+  margin-top: 120px;
+  padding: 20px;
+}
+  #main-container {
     width: 75%;
     margin: auto;
   }
