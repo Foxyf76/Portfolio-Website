@@ -28,19 +28,28 @@
     if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
       console.log('ON MOBILE');
-      
+
       var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
       $("#particles-js").css("height", "50%");
       $("#particles-js").css("top", "100px");
-      $("#segment1").css("background-position", "-150px center");
-      $("#segment2").css("background-position", "-150px center");
-      $("#segment3").css("background-position", "-150px center");
+      //$("#segment1").css("background-position", "-150px center");
+      //$("#segment2").css("background-position", "-150px center");
+      //$("#segment3").css("background-position", "-150px center");
+
+
+      
+      $(".item").css("margin", "auto");
+      
 
     }
 
   });
 
-  AOS.init();
+  AOS.init({
+    duration: 1200,
+    useClassNames: true,
+
+  });
 
 </script>
 
