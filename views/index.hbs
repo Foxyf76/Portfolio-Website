@@ -1,67 +1,70 @@
 {{!-- {{> menu id="home"}} --}}
+<div class="ui center aligned middle aligned inverted segment" id="content">
+  <div id="particles-js"></div>
 
-<div id="particles-js"></div>
-
-<div class="ui center aligned middle aligned inverted segment" id="main-container">
-
-
-  <div class="ui inverted segment" data-aos="fade-down" id="avatar">
-    <img class="ui centered small image" src="../assets/avatar.png">
+  <div class="ui inverted segment">
+    <img class="ui centered small image" src="../assets/avatar.png" data-aos="fade-down">
   </div>
 
-  <div class="item" data-aos="fade-right">
-    <hr id="line">
-    <span class="ui header" id="typed"></span>
-    <hr id="line">
-  </div>
-
-  <div class="ui centered padded stackable grid">
-
-    <div class="center aligned middle aligned six column row">
-
-      <div class="column">
-        <div data-aos="fade-up" data-aos-duration="800">
-          <a href="/about">
-            <h3 class="ui inverted header" id="slide">
-              <i class="info icon"></i>
-              <div class="content">
-                ABOUT
-              </div>
-            </h3>
-          </a>
-        </div>
-      </div>
-
-      <div class="column">
-        <div data-aos="fade-up" data-aos-duration="1600">
-          <a href="/blog">
-            <h3 class="ui inverted header" id="slide">
-              <i class="book icon"></i>
-              <div class="content">
-                BLOG
-              </div>
-            </h3>
-          </a>
-        </div>
-      </div>
-
-      <div class="column">
-        <div data-aos="fade-up" data-aos-duration="2400">
-          <a href="/more">
-            <h3 class="ui middle aligned inverted header" id="slide">
-              <i class="ui middle aligned plus icon"></i>
-              <div class="content">
-                MORE
-              </div>
-            </h3>
-          </a>
-        </div>
-      </div>
-
+  <div class="ui center aligned middle aligned raised inverted segment">
+    <div class="item" data-aos="fade-right">
+      <hr id="line">
+      <span class="ui header" id="typed"></span>
+      <hr id="line">
     </div>
   </div>
-  <br>
+
+
+
+  <div class="ui raised inverted segment" id="icons-segment">
+
+
+    <div class="ui stackable padded grid">
+      <div class="center aligned three column row">
+
+        <div class="column" id="slide">
+          <div data-aos="fade-up" data-aos-duration="1600">
+            <a href="/about">
+              <h4 class="ui inverted icon header" id="slide">
+                <i class="tiny info icon"></i>
+                <div class="content">
+                  ABOUT
+                </div>
+              </h4>
+            </a>
+          </div>
+        </div>
+
+        <div class="column">
+          <div data-aos="fade-up" data-aos-duration="2000">
+            <a href="/blog">
+              <h4 class="ui inverted icon header" id="slide">
+                <i class="book icon"></i>
+                <div class="content">
+                  BLOG
+                </div>
+              </h4>
+            </a>
+          </div>
+        </div>
+
+        <div class="column">
+          <div data-aos="fade-up" data-aos-duration="2600">
+            <a href="/more">
+              <h4 class="ui inverted circular icon header" id="slide">
+                <i class="plus icon"></i>
+                <div class="content">
+                  MORE
+                </div>
+              </h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 
 <script>
@@ -97,11 +100,12 @@
     background-color: transparent;
   }
 
-#avatar {
-  margin-top: 120px;
-  padding: 20px;
-}
-  #main-container {
+  #avatar {
+    margin-top: 120px;
+    padding: 20px;
+  }
+
+  #content {
     width: 75%;
     margin: auto;
   }
@@ -121,16 +125,17 @@
     animation: blink 0.7s infinite;
   }
 
-  .ui.centered.padded.stackable.grid {
-    height: 200px;
-  }
-
-  .column {
+  #icons-segment {
     width: 50%;
-
+    margin: auto;
+    transform: scale(0.8);
   }
 
-  #slide {
+  .ui.stackable.padded.grid {
+  }
+
+
+  .column #slide {
     transition: transform .2s;
   }
 
