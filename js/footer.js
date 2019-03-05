@@ -25,13 +25,17 @@ function getJSON(boolean) {
     get.onreadystatechange = () => {
       if (get.readyState == XMLHttpRequest.DONE) {
         json = JSON.parse(get.responseText);
-        $(".value")[0].innerHTML = json.webhits;
-        $(".value")[1].innerHTML = json.hearts;
         var fileName = location.href.split("/").slice(-1);
+        console.log(fileName);
         if (fileName == "") {
-          console.log(fileName);
+          console.log("incrementing");
           json.webhits++;
+        } else {
+          console.log("not on homepage");
+          $(".value")[0].innerHTML = json.webhits;
+          $(".value")[1].innerHTML = json.hearts;
         }
+
         postJSON(true);
       }
     };
