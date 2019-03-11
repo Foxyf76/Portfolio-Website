@@ -1,6 +1,5 @@
 {{> menu id="blog"}}
 
-
 <div class="ui raised inverted segment">
   <h1 class="ui center aligned massive icon header">
     <i class="circular inverted blue edit icon"></i>
@@ -8,68 +7,96 @@
   </h1>
 </div>
 
-<div class="ui red segment">
+<div class="ui left aligned raised inverted segment" id="content">
 
+  <div class="ui centered stackable grid">
+    <div class="four wide column">
+      <div class="ui inverted vertical fluid tabular menu">
+        <a class="active item">
+          DAY 22 - 01/02/19
+        </a>
+        <a class="item">
+          DAY 23 - 02/02/19
+        </a>
+        <a class="item">
+          DAY 24 - 03/02/19
+        </a>
+        <br>
+        <a class="item" href="https://lukefoxblog61276715.wordpress.com/">
+          <h3>READ MORE
+            <i class="large inverted wordpress icon"></i>
+          </h3>
+        </a>
+      </div>
+    </div>
+    <div class="twelve wide stretched column">
+      <div class="ui inverted segment">
+        <div class="tab content" id="day1">
+          <p>This morning I kicked off with the API to try and change calendar visibility. This proved to be a little
+            difficult as there was limited help online beyond the docs. A lot of the struggling came from trying to find
+            individual events. But what I eventually found was that each Event ID was contained in the source HTML and
+            was encoded. So once I found the code to decode it, I could find the corresponding event and begin to make
+            changes. </p>
 
-  <div id="my-container" class="table-responsive">
+          <p>The final step was to change the event visibility, which I found a helpful page on StackOverflow to help
+            with. After some trial and error I eventually managed to change the visibility – but that leaves a few
+            questions. </p>
+
+          <p>
+            <li>How do I authenticate each user?</li>
+            <li>How will I get this code working in a plugin when it’s all done through inline Javascript?</li>
+          </p>
+
+          <p>There is still a lot of work to be done, but at least I have the foundations in place. </p>
+
+        </div>
+
+        <div class="tab content" id="day2">
+          <p>Today started with a little bit of messing around with the calendar project, seeing ways of incorporating
+            the API code into a plugin – which I didn’t get far with as Googles rules for what is allowed in plugins is
+            a lot more strict than I thought. </p>
+
+          <p>I also had a meeting with Sean to talk about the firebase project. Sean had been talking to some of the
+            guys in Dublin who were responsible for getting other analytics on grafana and instructed me to put my
+            project inside a docker container. </p>
+
+          <p>Sean said I should try make this my priority for the next few days as once this is done, the guys in Dublin
+            will help from there.
+          </p>
+
+          <p>Sean gave me a repo link to a template docker environment so that’s my starting point. I will pick up on it
+            first thing tomorrow.</p>
+        </div>
+
+        <div class="tab content" id="day3">
+          <p>Picking up from yesterday, this morning I went straight into working on setting up docker. </p>
+
+          <p>The first step to this was to take out my code from the previous directory which was based of the DoneDeal
+            testing repo, and move it to it&rsquo;s own directory. But I ran into problems pretty quickly after. The
+            docker and Webdriver IO config files were set up quite differently than to what worked in the old directory.
+            This led to problems with even getting the tests to run. </p>
+
+          <p>After spending a few hours on it, I got a better idea of where the problem was. In this config, chrome is
+            run in what is called &lsquo;headless mode&rsquo;, where the browser is never actually opened during the
+            tests and it&rsquo;s all done through a server. Whatever way chrome is run on this server, it&rsquo;s
+            causing my tests to fail. I will have to talk to Sean to get help fixing this. </p>
+
+          <p>The rest of the afternoon was spent doing some manual testing for the new Bluestone Finance feature being
+            added to the site, where I had to test the application form validation. </p>
+
+          <p>I will hopefully make some more progress on docker tomorrow.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <!--Handlebar templates start-->
-  <script type="x-template" id="student-template">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Mark</th>
-                    <th>Subject</th>
-                </tr>
-                </thead>
-                <tbody>
-                {{#each students}}
-                <tr>
-                    <td>{{ this.name }}</td>
-                    <td>{{ this.mark }}</td>
-                    <td>{{ this.subject }}</td>
-                </tr>
-                {{/each}}
-                </tbody>
-            </table>
-        </script>
-
-
 
 </div>
 
-
-
 <div id="particles-js"></div>
 
+
 {{>footer}}
-
-<script src="../js/templateBlogs.js"></script>
-
-<script>
-
-  $('.ui.accordion')
-    .accordion()
-    ;
-
-
-
-//let getEntries = new XMLHttpRequest();
-
-// getEntries.onreadystatechange = () => {
-// if (getEntries.readyState == XMLHttpRequest.DONE) {
-// entries = JSON.parse(getEntries.responseText);
-// console.log(entries);
-//}
-// }
-// getEntries.open("GET", "https://api.jsonbin.io/b/5c614f11ad5128320af6cb7c", true);
-//getEntries.setRequestHeader("secret-key", "$2a$10$lFB8cBUsA81aQwasd4d9ku7iMDJjDdXllAWhanIuA4Nhf3gTVDmnS");
-//getEntries.send();
-
-
-
-</script>
 
 <style>
   body {
@@ -109,3 +136,50 @@
     margin: auto;
   }
 </style>
+
+<script>
+
+  $('.tab.content').hide();
+  $('[id="day1"]').show();
+
+  $('.ui.accordion')
+    .accordion()
+    ;
+
+  $('.item').click(function () {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.item').click(function () {
+    var tabText = $(this).text();
+    console.log("ITEM: " + tabText);
+    if ($.trim(tabText) == 'DAY 22 - 01/02/19') {
+      $('.tab.content').hide();
+      $('[id="day1"]').show();
+    }
+    if ($.trim(tabText) == 'DAY 23 - 02/02/19') {
+      $('.tab.content').hide();
+      $('[id="day2"]').show();
+    }
+    if ($.trim(tabText) == 'DAY 24 - 03/02/19') {
+      $('.tab.content').hide();
+      $('[id="day3"]').show();
+    }
+  });
+
+  $(document).ready(function () {
+    $("#lesen").click(function () {
+      $.ajax({
+        url: "test.txt",
+        dataType: "text",
+        success: function (data) {
+          $('[id="day3"]').html(data);
+          console.log("DATA: " + data);
+        }
+      });
+    });
+  });
+
+
+</script>

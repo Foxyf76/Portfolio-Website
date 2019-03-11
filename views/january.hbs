@@ -12,7 +12,7 @@
   <div class="ui centered stackable grid">
     <div class="four wide column">
       <div class="ui inverted vertical fluid tabular menu">
-        <a class="item">
+        <a class="active item">
           DAY 1 - 03/01/19
         </a>
         <a class="item">
@@ -21,8 +21,11 @@
         <a class="item">
           DAY 3 - 05/01/19
         </a>
-        <a class="item">
-          DAY 4 - 06/01/19
+        <br>
+        <a class="item" href="https://lukefoxblog61276715.wordpress.com/">
+          <h3>READ MORE
+            <i class="large inverted wordpress icon"></i>
+          </h3>
         </a>
       </div>
     </div>
@@ -106,7 +109,8 @@
             a presentation on Behaviour Driven Development. BDD is the development methodology Philly used while at
             Paddy Power and was hoping to encorporate it into some of the teams here as opposed to SCRUM. Still being
             somewhat unfamiliar to SCRUM, I wasn&rsquo;t quite able to fully comprehend the differences between BDD and
-            SCRUM - but what I did understand seemed quite interesting and the presentation was good fun to sit in on.</p>
+            SCRUM - but what I did understand seemed quite interesting and the presentation was good fun to sit in on.
+          </p>
 
           <p>As is becoming a frequent entry in this blog, there was more table tennis today. Playing in doubles
             instead today which was good craic, mainly because I get to play with a teammate who is better than me
@@ -170,6 +174,9 @@
 </style>
 
 <script>
+
+  $('.tab.content').hide();
+  $('[id="day1"]').show();
 
   $('.ui.accordion')
     .accordion()
