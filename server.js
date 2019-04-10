@@ -39,15 +39,19 @@ app.get("/blog", (req, res) => {
 });
 
 app.get("/blog/january", (req, res) => {
-  res.render("january.hbs");
+  res.render("months/january.hbs");
 });
 
 app.get("/blog/february", (req, res) => {
-  res.render("february.hbs");
+  res.render("months/february.hbs");
 });
 
 app.get("/blog/march", (req, res) => {
-  res.render("march.hbs");
+  res.render("months/march.hbs");
+});
+
+app.get("/blog/april", (req, res) => {
+  res.render("months/april.hbs");
 });
 
 app.listen(process.env.PORT || 5000, () => {

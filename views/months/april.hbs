@@ -1,0 +1,157 @@
+{{> menu id="blog"}}
+
+<div class="ui raised inverted segment">
+  <h1 class="ui center aligned massive icon header">
+    <i class="circular inverted blue edit icon"></i>
+    APRIL
+  </h1>
+</div>
+
+<div class="ui left aligned raised inverted segment" id="content">
+
+  <div class="ui centered stackable grid">
+    <div class="four wide column">
+      <div class="ui inverted vertical fluid tabular menu">
+        <a class="active item">
+          DAY 62 – 01/04/19
+        </a>
+        <a class="item">
+          DAY 63 – 02/04/19
+        </a>
+        <a class="item">
+          DAY 64 – 03/04/19
+        </a>
+        <br>
+        <a class="item" href="https://lukefoxblog61276715.wordpress.com/">
+          <h3>READ MORE
+            <i class="large inverted wordpress icon"></i>
+          </h3>
+        </a>
+      </div>
+    </div>
+    <div class="twelve wide stretched column">
+      <div class="ui inverted segment">
+        <div class="tab content" id="day1">
+          <p>First day back with the Metagenics and DoneDeal!</p>
+
+          <p>Despite being my first day back, today was not the most productive of days. Unfortunately, most of the day 
+            was spent on trying to fix up an old branch that I never got around to completing as it was causing problems.</p>
+
+          <p>This time around, the problems are still there and it’s slowing me down enormously. Thankfully, towards the 
+            end of the day, I think I pinpointed the problem so now I can try work around it and hopefully get the 
+            branch out for a pull request. </p>
+
+          <p>Hopefully I will have a little free time tomorrow to get this done.</p>
+
+        </div>
+
+        <div class="tab content" id="day2">
+          <p>This morning picked up from what I spent the majority of my time on yesterday, trying to get some tests 
+            working so I could finish the branch and make a pull request. Thankfully, I finally made some progress today 
+            and the first few tests have started working. It’s only early stages but I’m glad to finally be making some 
+            progress on them. </p>
+
+          <p>The rest of the day was spent getting stuck back into QA work, where I managed to get through a few stories. 
+            I forgot how much I missed the convenience of being able to approach a developer with a question rather than 
+            messaging and waiting for a response. I really am glad to be back working with the team. </p>
+
+          <p>A few minutes before finishing, I worked a little more on the branch, just to get those tests out of the way 
+            so that they don’t interfere with sprint work any longer. This will probably be the focus early tomorrow too.</p>
+        </div>
+
+        <div class="tab content" id="day3">
+          <p>Nothing new or exiting to offer with this post today, just a usual but productive day. I was kept quite busy 
+            with both manual testing and writing some automated tests also.</p>
+
+          <p>In the pockets of spare time, I continued to work on some of my older branches. But I ran into an issue with 
+            one of the tests and have but the test on hold until I can think of a proper solution.</p>
+
+          <p>Tomorrow should be more exciting, as we have all the QA team from Dublin and London coming down for a QA workshop.
+             This workshop will focus on 2 things – Jenkins and Spectre, the latter being a new tool to aid in the visual 
+             regression testing. Looking forward to learning something new tomorrow! </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="particles-js"></div>
+
+
+{{>footer}}
+
+<style>
+  body {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+      url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .ui.raised.inverted.segment {
+    background-color: transparent;
+    width: 75%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .content {
+    font-size: 16px;
+    margin-left: 150px;
+  }
+
+  #content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  .ui.inverted.vertical.fluid.tabular.menu .active.item {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    color: rgb(0, 153, 255) !important;
+  }
+
+  .tab.content {
+    margin: auto;
+  }
+</style>
+
+<script>
+
+  $('.tab.content').hide();
+  $('[id="day1"]').show();
+
+  $('.ui.accordion')
+    .accordion()
+    ;
+
+  $('.item').click(function () {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.item').click(function () {
+    var tabText = $(this).text();
+    console.log("ITEM: " + tabText);
+    if ($.trim(tabText) == 'DAY 62 – 01/04/19') {
+      $('.tab.content').hide();
+      $('[id="day1"]').show();
+    }
+    if ($.trim(tabText) == 'DAY 63 – 02/04/19') {
+      $('.tab.content').hide();
+      $('[id="day2"]').show();
+    }
+    if ($.trim(tabText) == 'DAY 64 – 03/04/19') {
+      $('.tab.content').hide();
+      $('[id="day3"]').show();
+    }
+  });
+
+
+
+</script>
